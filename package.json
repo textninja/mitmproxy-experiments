@@ -1,14 +1,44 @@
 {
   "name": "mitmproxy-experiments",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
   "repository": "https://github.com/textninja/mitmproxy-experiments.git",
   "author": "Joe Taylor <joe@textninja.net>",
+  "engines": {
+    "node": ">=17.6.0"
+  },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --ext .js --ignore-path .gitignore ."
   },
   "license": "MIT",
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2022": true,
+      "node": true
+    },
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "plugins": [
+      "jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.spec.js"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  },
   "devDependencies": {
-    "jest": "^27.5.1"
+    "eslint": "^8.10.0",
+    "eslint-plugin-jest": "^26.1.1",
+    "jest": "^27.5.1",
+    "babel-eslint": "^10.1.0"
   }
 }
