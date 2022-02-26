@@ -1,0 +1,14 @@
+{
+  "name": "mitmproxy-experiments",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/textninja/mitmproxy-experiments.git",
+  "author": "Joe Taylor <joe@textninja.net>",
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
