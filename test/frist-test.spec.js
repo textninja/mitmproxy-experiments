@@ -6,7 +6,7 @@ describe("frist test", () => {
     beforeAll(() => {
         subprocess = childprocess.spawn(
             'mitmdump',
-            ['-s', 'kill-everything.py']
+            ['-s', 'scripts/kill-everything.py']
         );
 
         subprocess.stdout.on('data', (chunk) => {
