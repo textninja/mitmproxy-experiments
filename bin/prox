@@ -1,0 +1,15 @@
+#!/bin/bash
+. "${BASH_SOURCE%/*}/../venv/bin/activate"
+
+echo $BASH_SOURCE
+. "${BASH_SOURCE%/*}/proxyon"
+
+function finish {
+    . "${BASH_SOURCE%/*}/proxyoff"
+}
+
+trap finish EXIT 
+
+echo "Proxying through hello-everybody..."
+mitmdump -q -s "${BASH_SOURCE%/*}/../scripts/hello-everybody.py"
+finish
