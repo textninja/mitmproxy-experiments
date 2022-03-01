@@ -1,0 +1,3 @@
+#!/bin/bash
+networksetup -setsecurewebproxystate Ethernet off
+networksetup -setwebproxystate Ethernet off
